@@ -14,7 +14,7 @@ const AdminComponent = () => {
         <Linkes to="/home">
           <img src="src\img\casa.png" alt="" /> Home
         </Linkes>
-       
+
         <h2>Juegos</h2>
         <Linkes to="/Juegos">
           <img src="src\img\casa.png" alt="" /> Juegos

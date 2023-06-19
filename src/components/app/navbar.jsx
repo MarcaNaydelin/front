@@ -5,7 +5,6 @@ import { useNavContext } from "../../context/navcontext";
 import { useuserContext } from "../../context/userContext";
 import Login from "../../pages/Login";
 import AdminComponent from "./routesToRole/admin";
-import LaboratorioComponent from "./routesToRole/laboratorio";
 
 const Navbar = () => {
   const { logged } = useNavContext;

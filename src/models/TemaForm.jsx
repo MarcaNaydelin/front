@@ -1,19 +1,15 @@
-import React from 'react'
+import React from "react";
 import { useState, useEffect } from "react";
-import { updatetema ,posttema } from '../services/Temas';
+import { updatetema, posttema } from "../services/Temas";
 
-const TemaForm = ({getApi,temaactual,settemaactual,closeModal
-
-}) => {
-
-  // variable de estado 
+const TemaForm = ({ getApi, temaactual, settemaactual, closeModal }) => {
+  // variable de estado
   const [titulo, setTitulo] = useState("");
   const [descripcion, setDescripcion] = useState("");
 
   // gestionar cuando va a cambiar el elemento
   useEffect(() => {
     if (Object.keys(temaactual).length > 0) {
-
       setTitulo(temaactual.titulo);
       setDescripcion(temaactual.descripcion);
     }
@@ -23,7 +19,7 @@ const TemaForm = ({getApi,temaactual,settemaactual,closeModal
   }, [temaactual]);
 
   const updatepost = (e) => {
-    // es para que se actualice la pagina 
+    // es para que se actualice la pagina
     e.preventDefault();
     if (Object.keys(temaactual).length > 0) {
       updatetema(
@@ -31,18 +27,17 @@ const TemaForm = ({getApi,temaactual,settemaactual,closeModal
           id: temaactual.id,
           titulo: titulo,
           descripcion: descripcion,
-        
         },
         () => {
           setTitulo("");
           setDescripcion("");
           settemaactual({});
-     
+
           getApi();
         }
       );
     } else {
-      posttema(titulo,descripcion, () => {
+      posttema(titulo, descripcion, () => {
         setTitulo("");
         setDescripcion("");
         getApi();
@@ -53,7 +48,7 @@ const TemaForm = ({getApi,temaactual,settemaactual,closeModal
 
   return (
     <div>
-        <form>
+      <form>
         <div>
           <div>
             <label>escribe el nombre del tema:</label>
@@ -74,7 +69,7 @@ const TemaForm = ({getApi,temaactual,settemaactual,closeModal
             />
           </div>
         </div>
-      
+
         <section>
           <button onClick={(e) => updatepost(e)}>
             {Object.keys(temaactual).length > 0 ? "Editar" : "Agregar"}
@@ -82,7 +77,7 @@ const TemaForm = ({getApi,temaactual,settemaactual,closeModal
         </section>
       </form>
     </div>
-  )
-}
+  );
+};
 
-export default TemaForm
+export default TemaForm;

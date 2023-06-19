@@ -1,15 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
 *{
-  font-family: 'Cinzel', serif;
+  /* font-family: 'Cinzel', serif; */
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-body{
+  font-size:100;
 }
 ::-webkit-scrollbar {
   width: 8px;
-
 }
 ::-webkit-scrollbar-track {
   background: #e3e4e96b;
@@ -18,6 +16,4 @@ body{
 ::-webkit-scrollbar-thumb {
   background: #11268363;
   border-radius: 3em;
-
-
 }

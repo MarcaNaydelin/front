@@ -9,7 +9,7 @@ const Ususarios = () => {
   const navigate = useNavigate();
   const { user } = useuserContext();
   return (
-   <>
+  <>
     <div>
       </div>
       <section>
@@ -40,9 +40,11 @@ const Ususarios = () => {
             ))}
           </tbody>
         </table>
+        <button onClick={openModal}> agregar</button>
         <p> Cantidad de registros {users.length}</p>
+        
       </section>
-   </>
+  </>
   )
 
           }

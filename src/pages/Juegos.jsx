@@ -83,7 +83,7 @@ const Juegos = () => {
 
 export default Juegos;
 export const Div = styled.article`
-  weight: 90%;
+  width: 90%;
   margin: 2em auto;
   height: 100%;
   background: #11268363;

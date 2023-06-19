@@ -128,6 +128,9 @@ console.log(puntuacion);
               value={imagen}
               onChange={(e) => setImagen(e.target.value)}
             />
+            {/* buscar atributo html para seleccionar archivos */}
+            {/* buscas un convertidor de archivos a texto o string (blob) */}
+            {/* asiganar e estado a el dato blobl ( onChange={(e) => setImagen(e.target.value)}) */}
           </div>
           <div>
             <label>puntaje:</label>

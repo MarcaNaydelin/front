@@ -1,8 +1,6 @@
 const baseUrl =
     import.meta.env.VITE_BACKEND_URL
 export const getretroalimebntacion = async () => {
-
-
     try {
         const response = await fetch(`${baseUrl}retro`, {
             method: "GET",
